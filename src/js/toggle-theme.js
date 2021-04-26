@@ -26,17 +26,17 @@ function userLocalStorageCheck() {
 themeSwitchToggle.addEventListener('change', onChangeTheme);
 
 function onChangeTheme(evt) {
-        if (evt.target.checked) {
-        document.body.classList.add(Theme.DARK);
-        document.body.classList.remove(Theme.LIGHT);
-            
+    if (evt.target.checked) {
+        toggleTheme();
         localStorage.setItem(USER_THEME_KEY, Theme.DARK);
-} else {
-        document.body.classList.add(Theme.LIGHT);
-        document.body.classList.remove(Theme.DARK);
-                
+    } else {
+        toggleTheme();
         localStorage.setItem(USER_THEME_KEY, Theme.LIGHT);
 }
 }
 
+function toggleTheme() {
+    document.body.classList.toggle(Theme.DARK);
+    document.body.classList.toggle(Theme.LIGHT);
+}
 

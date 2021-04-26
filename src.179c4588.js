@@ -9,10 +9,10 @@ module.exports=[{id:"XWaQXcbk0",name:"Картофель, запеченный �
 },{}],"vcrK":[function(require,module,exports) {
 "use strict";var e=u(require("../templates/menu-cards.hbs")),r=u(require("../menu.json"));function u(e){return e&&e.__esModule?e:{default:e}}var t=document.querySelector(".js-menu"),n=(0,e.default)(r.default);t.insertAdjacentHTML("beforeend",n);
 },{"../templates/menu-cards.hbs":"FWSq","../menu.json":"mA8c"}],"mKm0":[function(require,module,exports) {
-var e={LIGHT:"light-theme",DARK:"dark-theme"},t="my-theme",d=document.querySelector("#theme-switch-toggle");function c(d){d.target.checked?(document.body.classList.add(e.DARK),document.body.classList.remove(e.LIGHT),localStorage.setItem(t,e.DARK)):(document.body.classList.add(e.LIGHT),document.body.classList.remove(e.DARK),localStorage.setItem(t,e.LIGHT))}function o(){var c=localStorage.getItem(t);c&&document.body.classList.add(c),c===e.DARK&&(d.checked=!0)}document.body.classList.add(e.LIGHT),o(),d.addEventListener("change",c);
+var e={LIGHT:"light-theme",DARK:"dark-theme"},t="my-theme",d=document.querySelector("#theme-switch-toggle");function c(){var c=localStorage.getItem(t);c?document.body.classList.add(c):document.body.classList.add(e.LIGHT),c===e.DARK&&(d.checked=!0)}function o(d){d.target.checked?(document.body.classList.add(e.DARK),document.body.classList.remove(e.LIGHT),localStorage.setItem(t,e.DARK)):(document.body.classList.add(e.LIGHT),document.body.classList.remove(e.DARK),localStorage.setItem(t,e.LIGHT))}c(),d.addEventListener("change",o);
 },{}],"clu1":[function(require,module,exports) {
 
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=s(require("./js/cards-markup")),r=s(require("./js/toggle-theme"));function s(e){return e&&e.__esModule?e:{default:e}}require("./sass/main.scss");
 },{"./js/cards-markup":"vcrK","./js/toggle-theme":"mKm0","./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service-parcel/src.fa0c6808.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service-parcel/src.179c4588.js.map
